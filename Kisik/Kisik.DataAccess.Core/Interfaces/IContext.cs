@@ -11,7 +11,7 @@ namespace Kisik.DataAccess.Core.Interfaces
 {
     public interface IContext : IDisposable, IAsyncDisposable
     {
-        DbSet<UserRto> Users { get; set; }
+        DbSet<userRto> Users { get; set; }
         DbSet<VirtualExpenseRto> VirtualExpenses { get; set; }
         DbSet<RejectExpenceRto> RejectExpences { get; set; }
         DbSet<AcceptExpenseRto> AcceptExpenses { get; set; }

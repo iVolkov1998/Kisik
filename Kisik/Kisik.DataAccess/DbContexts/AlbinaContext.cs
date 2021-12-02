@@ -16,7 +16,7 @@ namespace Kisik.DataAccess.DbContexts
 
         }
 
-        public DbSet<UserRto> Users { get; set; }
+        public DbSet<userRto> Users { get; set; }
         public DbSet<VirtualExpenseRto> VirtualExpenses { get ; set ; }
         public DbSet<RejectExpenceRto> RejectExpences { get ; set ; }
         public DbSet<AcceptExpenseRto> AcceptExpenses { get ; set ; }

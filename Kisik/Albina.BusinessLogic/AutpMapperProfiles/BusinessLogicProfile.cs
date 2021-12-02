@@ -13,21 +13,21 @@ namespace Albina.BusinessLogic.AutpMapperProfiles
     {
         public BusinessLogicProfile()
         {
-            CreateMap<UserRto, UserInformationBlo>()
+            CreateMap<userRto, UserInformationBlo>()
                 .ForMember(x => x.Name, x => x.MapFrom(m => m.Name))
                 .ForMember(x => x.Surname, x => x.MapFrom(m => m.Surname))
                 .ForMember(x => x.PhoneNumberPrefix, x => x.MapFrom(m => m.PhoneNumberPrefix))
                 .ForMember(x => x.PhoneNumber, x => x.MapFrom(m => m.PhoneNumber))
                 .ForMember(x => x.ImageUrl, x => x.MapFrom(m => m.ImageUrl));
 
-            CreateMap<UserRto, UserIdentityBlo>()
+            CreateMap<userRto, UserIdentityBlo>()
                   .ForMember(x => x.Id, x => x.MapFrom(m => m.Id))
                   .ForMember(x => x.NumberPrefix, x => x.MapFrom(m => m.PhoneNumberPrefix))
                   .ForMember(x => x.Number, x => x.MapFrom(m => m.PhoneNumber))
                   .ForMember(x => x.Password, x => x.MapFrom(m => m.Password))
                   .ForMember(x => x.ConfirmPassword,m => m.Ignore());
 
-            CreateMap<UserRto, UserUpdateBlo>()
+            CreateMap<userRto, UserUpdateBlo>()
                 .ForMember(x => x.Name, x => x.MapFrom(m => m.Name))
                 .ForMember(x => x.FirstName, x => x.MapFrom(m => m.Surname))
                 .ForMember(x => x.Password, x => x.MapFrom(m => m.Password))
