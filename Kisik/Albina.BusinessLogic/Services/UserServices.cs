@@ -1,5 +1,7 @@
 ﻿using Albina.BusinessLogic.Core.Interfaces;
 using Albina.BusinessLogic.Core.Models;
+using AutoMapper;
+using Kisik.DataAccess.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,15 @@ namespace Albina.BusinessLogic.Services
 {
     public class UserServices : IUserService
     {
+        private readonly IMapper _mapper;
+        private readonly IContext _context;
+
+        public UserServices(IMapper mapper, IContext context)
+        {
+            _mapper = mapper;
+            _context = context;
+        }
+
         public Task<UserInformationBlo> Auth(UserIdentityBlo userIdentityBlo)
         {
             
@@ -22,7 +33,7 @@ namespace Albina.BusinessLogic.Services
 
         public Task<UserInformationBlo> Get(int userId)
         {
-            throw new NotImplementedException();
+            _context.Users
         }
 
         public Task<UserInformationBlo> Register(UserIdentityBlo userIdentityBlo)
@@ -33,7 +44,7 @@ namespace Albina.BusinessLogic.Services
         public Task<UserInformationBlo> Update(UserIdentityBlo userIdentityBlo, UserUpdateBlo userUpdateBlo)
         {
             throw new NotImplementedException();
-            dada
+            
         }
     }
 }
