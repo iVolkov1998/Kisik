@@ -127,6 +127,10 @@
       <Project>{6DCFE11D-8D39-4274-A8F3-5D93C02B7E6F}</Project>
       <Name>Kisik.DataAccess.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shareds\Shareds.csproj">
+      <Project>{B7F70937-633A-40A2-A994-29913ACB6B79}</Project>
+      <Name>Shareds</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
